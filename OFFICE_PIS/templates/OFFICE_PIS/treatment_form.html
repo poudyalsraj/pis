@@ -1,0 +1,43 @@
+ {%  extends 'base.html'%} 
+
+{% block content %}
+
+
+<!-- ==============Main Form============-->
+<center>
+<div class="container" >
+	<div class="col-12">
+  		<div class="card">
+	  		<div class="card bg-info text-white">
+		    	<div class="card-header">उपचार खर्च विवरण </div>
+			</div>
+			<div class="card-body">
+				<form action = '' method ='POST' enctype = 'multipart/form-data'> <!-- enctype le  media upload gareko -->
+				
+				
+				<!-- =============Django code for create form ======== -->
+					<br>
+										
+											
+						{% csrf_token %}
+						{{ form.as_p }}
+
+					
+
+				<!--=========== End of Djnago code to create form ========-->
+		</div>
+		<div class="card-footer">					
+			<button  type = "submit" class="btn btn-success"> पेश गर्नुहोस </button>&nbsp;
+			<button  type = "cancel" class="btn btn-warning"> रद्द गर्नुहोस </button>
+		</div>
+		</form>
+	</div>
+</div>
+</div>
+
+
+</center>
+
+<!--============End of main Form========= -->
+
+{% endblock %}

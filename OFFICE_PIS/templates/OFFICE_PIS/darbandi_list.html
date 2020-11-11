@@ -1,0 +1,71 @@
+{%  extends 'base.html'%}
+
+{% block content %}
+
+
+
+
+
+
+
+<!-- Darbandi List....  -->
+<center>
+<div class="container" > 
+<div class="col-12">
+<div class="card">
+  	
+	  	<div class="card bg-info text-white">
+		    <div class="card-header">दरबन्दी विवरण </div>
+		</div>
+		<div class="card-body">
+
+		<table class="table table-bordered table-hover">
+      <thead class="thead-light">
+        <tr>
+          <th>Post Id</th>
+          <th>Post Name</th>
+          <th>Total Posts</th>
+          <th>Current Posts</th>
+
+        </tr>
+      </thead>
+      <tbody>
+
+      <!--============Djnago Code======-->
+      {% for darbandi in darbandi_list %}
+        <tr>
+          <td>{{darbandi.id}}</td>
+          <td> <a href = "{% url 'darbandi-update' darbandi.id %}"> {{darbandi.post}} </a></td>
+          <td>{{darbandi.total_post}}</td>
+          <td>{{darbandi.current_post}}</td>
+    
+          
+        </tr>
+       {% endfor %}
+      </tbody>
+    </table>
+
+
+		<div class="card-footer">
+			     <!-- Button of permanent and non permanent staff.. -->
+
+              <a href = "{% url 'darbandi-add'  %}"><button type = 'submit' class="btn btn-secondary btn-sm "> दरबन्दी अपडेट </button></a>
+              &nbsp;
+
+              <a href = "{% url 'post-add'%}"><button type = 'submit' class="btn btn-secondary btn-sm "> पदहरु थप्नुहोस </button> </a>
+
+
+
+		</div>
+		</div>
+	</div>
+</div>
+</div>
+
+
+
+
+
+</center>
+
+{% endblock %}

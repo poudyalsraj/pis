@@ -1,0 +1,54 @@
+{%  extends 'base.html'%} 
+
+{% load crispy_forms_tags %}
+{% block content %}
+
+
+<!-- ==============Main Form============-->
+<center>
+<div class="container" >
+<div class="col-12">
+  	<div class="card">
+	  	<div class="card bg-info text-white">
+		    <div class="card-header">दरबन्दी अपडेट </div>
+		</div>
+		<div class="card-body text-left">
+			<div class="col-4">
+                        
+				<form action = '' method ='POST' enctype = 'multipart/form-data'> <!-- enctype le  media upload gareko -->
+				
+				
+				<!-- =============Django code for create form ======== -->
+					<br>
+										
+											
+						{% csrf_token %}
+						{%  for field in form %}
+						          {{field.label_tag}}<br>
+						          <div class=" text-center">
+						          {{ field}}<br>
+						          </div>
+						          
+						          <br>
+						{% endfor %}
+
+					
+			
+				<!--=========== End of Djnao code to create form ========-->
+			</div>
+		</div>
+		<div class="card-footer">					
+			<button  type = "submit" class="btn btn-success"> पेश गर्नुहोस </button>&nbsp;
+			<button  type = "cancel" class="btn btn-warning"> रद्द गर्नुहोस </button>
+		</div>
+		</form>
+	</div>
+</div>
+</div>
+
+</form>
+</center>
+
+<!--============End of main Form========= -->
+
+{% endblock %}

@@ -1,0 +1,43 @@
+{%  extends 'base.html'%}
+
+{% block content %}
+
+<center>
+
+<div class="container">
+  <h2>Non Permanent Staff List</h2>
+  
+  <div class="table-responsive">
+    <table class="table table-bordered">
+      <thead class="thead-light">
+        <tr>
+          <th>Name</th>
+          <th>Post</th>
+          <th>Address</th>
+          <th>Phone</th>
+        </tr>
+      </thead>
+      <tbody>
+
+      <!--============Djnago Code======-->
+      {% for staff in staff_list %}
+        <tr>
+          <td><a href = "{% url 'staff-detail' staff.id %}"> {{staff.name}} </a></td>
+          <td>{{staff.post}}</td>
+          <td>{{staff.address}}</td>
+          <td>{{staff.ph_num}}</td>
+          
+        </tr>
+       {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+
+
+</center>
+
+
+{% endblock %}
