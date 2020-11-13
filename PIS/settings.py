@@ -25,7 +25,7 @@ SECRET_KEY = '(yln!^faw_+yxg9e1+@za9^nm1tb21z)0a^ua03-&))*$3tfvi'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['pis1.herokuapp.com', 'http://127.0.0.1:8000', 'localhost']
 # 'localhost','server ip'
 
 
