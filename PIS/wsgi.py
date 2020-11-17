@@ -11,11 +11,11 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 # from whitenoise import WhiteNoise
-from whitenois.django import DjangoWhiteNoise
+# from whitenois.django import DjangoWhiteNoise
 
 
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "PIS.settings")
 
 application = get_wsgi_application()
-application = WhiteNoise(application)
+# application = WhiteNoise(application)
 # application.add_files('static', prefix='more-files/')
