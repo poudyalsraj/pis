@@ -46,7 +46,8 @@
 				                            </div>
 				                        </div>
 				                    </div> <br>
-						          
+
+						{{ inlines.management_form|crispy }}
                    		{% for formset in inlines %}
 
                    			<!-- Address Form-->
@@ -59,6 +60,7 @@
 				                                <h4>Address:</h4>
 				                                <p>
 				                                
+
 				                                {{ formset|crispy }}
 				                                 </p>
 				                            </div>
