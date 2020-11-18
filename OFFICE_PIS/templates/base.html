@@ -141,7 +141,7 @@
         </div>
 
       {% else %}
-
+      <!-- When you are not looged in -->
       <!-- Header Start -->
  
         <div class="logo text-center">
@@ -171,12 +171,9 @@
       <br>
       <center>
        <div class="col-xl-2 col-lg-2 col-md-1">
-                            <div class="header-right-btn f-right d-none d-lg-block">
-                                
-                                {{user.username}}  &nbsp;
-                                <a href="{% url 'login' %}" class="btn header-btn">Log In</a>
-                            </div>
-                        </div>
+            <a href="{% url 'login' %}" class="btn header-btn">Log In</a>
+      </div>
+                        
       </center>
 
       {% endif %}
