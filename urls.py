@@ -36,13 +36,6 @@ urlpatterns =[
     path ('', TemplateView.as_view (template_name = 'home.html'), name ='home'),	
     
 
-	# # yesma url matching garda staff ra delete rakheni hunxa narakhe ni hunxa
-	# url(r'^del/(?P<pk>\d+)$', views.StaffDeleteView.as_view(), name ='staff-del'),
 	
-	
-	# url(r'^staff/permanent$', views.permanentStaff, name ='staff-permanent'),
-	# url(r'^staff/non-permanent$', views.non_permanentStaff, name ='staff-non-permanent'),
-	
-
 	
 ]
